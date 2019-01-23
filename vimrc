@@ -45,6 +45,7 @@ Plug 'luochen1990/rainbow'
 " Colorschemes
 Plug 'dracula/vim'
 Plug 'hzchirs/vim-material'
+Plug 'drewtempelmeyer/palenight.vim'
 
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
