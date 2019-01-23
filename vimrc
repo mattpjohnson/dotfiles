@@ -42,6 +42,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'luochen1990/rainbow'
 Plug 'danro/rename.vim'
+Plug 'majutsushi/tagbar'
 
 " Colorschemes
 Plug 'dracula/vim'
