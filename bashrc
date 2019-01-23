@@ -1,5 +1,9 @@
 # Aliases
 
+## Tmux
+alias tmux="TERM=screen-256color-bce tmux"
+alias tmm='tmux new -As Master'
+
 ## Git
 alias ga="git add"
 alias gc="git commit"
