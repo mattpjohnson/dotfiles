@@ -41,6 +41,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'luochen1990/rainbow'
+Plug 'danro/rename.vim'
 
 " Colorschemes
 Plug 'dracula/vim'
