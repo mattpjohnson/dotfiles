@@ -43,6 +43,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'luochen1990/rainbow'
 Plug 'danro/rename.vim'
 Plug 'majutsushi/tagbar'
+Plug 'mhinz/vim-signify'
 
 " Colorschemes
 Plug 'dracula/vim'
