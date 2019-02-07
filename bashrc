@@ -1,8 +1,10 @@
 # Aliases
 
+## Fix vim colors from within Tmux
+alias vim="TERM=xterm vim"
 ## Tmux
 alias tmux="TERM=screen-256color-bce tmux"
-alias tmm='tmux new -As Master'
+alias tmm='tmux new -As Main'
 
 ## Git
 alias ga="git add"
