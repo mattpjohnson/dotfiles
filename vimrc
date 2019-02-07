@@ -1,6 +1,8 @@
 set relativenumber
 set scrolloff=3
 set showmatch
+set ignorecase
+set smartcase
 
 """""""""
 " Keymaps
@@ -19,13 +21,33 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+" Resize windows
+nnoremap <silent> <leader>+ :vertical resize +5<cr>
+nnoremap <silent> <leader>- :vertical resize -5<cr>
 " Edit .vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " Delete to blackhole register
 nmap <leader>d "_d
+" Find file in NERDTree
+nnoremap <leader>f :NERDTreeFind<cr>
+" Do some greppin
+nnoremap <leader>g :grep -ri
 
 nnoremap <C-p> :FZF<cr>
 
+nnoremap <C-t> :tabnew<cr>
+
+" Faster tab navigation
+nnoremap <leader>0 1gt
+nnoremap <leader>1 2gt
+nnoremap <leader>2 3gt
+nnoremap <leader>3 4gt
+nnoremap <leader>4 5gt
+nnoremap <leader>5 6gt
+nnoremap <leader>6 7gt
+nnoremap <leader>7 8gt
+nnoremap <leader>8 9gt
+nnoremap <leader>9 10gt
 
 """"""""""""""
 " Vim-Plug Setup
