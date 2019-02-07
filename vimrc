@@ -49,6 +49,7 @@ nnoremap <leader>7 8gt
 nnoremap <leader>8 9gt
 nnoremap <leader>9 10gt
 
+
 """"""""""""""
 " Vim-Plug Setup
 """"""""""""""
@@ -60,18 +61,29 @@ call plug#begin('~/.vim/plugged')
 " Plugins
 """""""""
 
+Plug 'tpope/vim-sensible'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
 Plug 'luochen1990/rainbow'
 Plug 'danro/rename.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-signify'
+Plug 'vim-airline/vim-airline'
+Plug 'Yggdroot/indentLine'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'udalov/kotlin-vim'
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-dispatch'
 
 " Colorschemes
 Plug 'dracula/vim'
 Plug 'hzchirs/vim-material'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'kaicataldo/material.vim'
+Plug 'jdsimcoe/abstract.vim'
 
+" FZF
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 
@@ -89,10 +101,15 @@ let g:rainbow_active = 1
 """""""""""""""""
 " Set Colorscheme
 """""""""""""""""
-colorscheme dracula
+colorscheme material
+let g:material_theme_style = 'palenight'
 
 " Automatically open NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 " Close if NERDTree is the only editor open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+if (has("termguicolors"))
+  set termguicolors
+endif
