@@ -101,7 +101,7 @@ let g:rainbow_active = 1
 """""""""""""""""
 " Set Colorscheme
 """""""""""""""""
-colorscheme material
+colorscheme palenight
 let g:material_theme_style = 'palenight'
 
 " Automatically open NERDTree
