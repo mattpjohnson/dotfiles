@@ -80,8 +80,8 @@ Plug 'tpope/vim-dispatch'
 Plug 'dracula/vim'
 Plug 'hzchirs/vim-material'
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'kaicataldo/material.vim'
 Plug 'jdsimcoe/abstract.vim'
+Plug 'fatih/molokai'
 
 " FZF
 Plug '~/.fzf'
@@ -101,8 +101,7 @@ let g:rainbow_active = 1
 """""""""""""""""
 " Set Colorscheme
 """""""""""""""""
-colorscheme palenight
-let g:material_theme_style = 'palenight'
+colorscheme molokai
 
 " Automatically open NERDTree
 autocmd StdinReadPre * let s:std_in=1
