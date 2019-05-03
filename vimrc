@@ -85,6 +85,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'udalov/kotlin-vim'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-dispatch'
+Plug 'editorconfig/editorconfig-vim'
 
 " Colorschemes
 Plug 'dracula/vim'
