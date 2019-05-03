@@ -3,6 +3,11 @@ set scrolloff=3
 set showmatch
 set ignorecase
 set smartcase
+" Enable mouse
+set mouse=a
+" Long lines
+set textwidth=79
+set colorcolumn=+1
 
 """""""""
 " Keymaps
@@ -32,12 +37,17 @@ nmap <leader>d "_d
 nnoremap <leader>f :NERDTreeFind<cr>
 " Do some greppin
 nnoremap <leader>g :grep -ri
-
+" Map : to ; also in command mode.
+nnoremap ; :
+vmap ; :
+nmap <silent> <leader>/ :nohlsearch<CR>
+" Redraw screen every time focus is gained
+au FocusGained * :redraw!
+" Ctrl+P searching"
 nnoremap <C-p> :FZF<cr>
 
-nnoremap <C-t> :tabnew<cr>
-
 " Faster tab navigation
+nnoremap <C-t> :tabnew<cr>
 nnoremap <leader>0 1gt
 nnoremap <leader>1 2gt
 nnoremap <leader>2 3gt
