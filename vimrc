@@ -1,8 +1,14 @@
-set relativenumber
+set number relativenumber
 set scrolloff=3
 set showmatch
 set ignorecase
 set smartcase
+set cursorline
+set autochdir
+set foldmethod=indent
+set nofoldenable
+set foldlevel=2
+set noswapfile
 " Enable mouse
 set mouse=a
 " Long lines
@@ -45,6 +51,8 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 au FocusGained * :redraw!
 " Ctrl+P searching"
 nnoremap <C-p> :FZF<cr>
+" Open tagbar
+nmap <F8> :TagbarToggle<CR>
 
 " Faster tab navigation
 nnoremap <C-t> :tabnew<cr>
@@ -58,6 +66,27 @@ nnoremap <leader>6 7gt
 nnoremap <leader>7 8gt
 nnoremap <leader>8 9gt
 nnoremap <leader>9 10gt
+" Turn hex-mode on/off
+map <Leader>hon :%!xxd<CR>
+map <Leader>hof :%!xxd -r<CR>
+
+
+""""""""""
+" Autocmds
+""""""""""
+
+" Commenting blocks of code.
+autocmd BufEnter *                let b:comment_leader = '// '
+autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+autocmd FileType conf,fstab       let b:comment_leader = '# '
+autocmd FileType tex              let b:comment_leader = '% '
+autocmd FileType mail             let b:comment_leader = '> '
+autocmd FileType vim              let b:comment_leader = '" '
+autocmd BufEnter vimrc            let b:comment_leader = '" '
+noremap <silent> <leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> <leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>'"'"
+" Auto-reload vimrc
+autocmd BufWritePost ~/.vimrc,vimrc source ~/.vimrc
 
 
 """"""""""""""
@@ -92,6 +121,7 @@ Plug 'hzchirs/vim-material'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'jdsimcoe/abstract.vim'
 Plug 'fatih/molokai'
+Plug 'patstockwell/vim-monokai-tasty'
 
 " FZF
 Plug '~/.fzf'
@@ -111,7 +141,8 @@ let g:rainbow_active = 1
 """""""""""""""""
 " Set Colorscheme
 """""""""""""""""
-colorscheme molokai
+let g:vim_monokai_tasty_italic = 1
+colorscheme vim-monokai-tasty
 
 " Automatically open NERDTree
 autocmd StdinReadPre * let s:std_in=1
@@ -121,6 +152,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Enable relative line numbers in NERDTree
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
+" Automatically open tagbar
+autocmd BufEnter *.java :TagbarOpen
 
 if (has("termguicolors"))
   set termguicolors
