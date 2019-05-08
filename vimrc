@@ -115,6 +115,7 @@ Plug 'udalov/kotlin-vim'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-dispatch'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Colorschemes
 Plug 'dracula/vim'
