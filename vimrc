@@ -116,6 +116,7 @@ Plug 'ervandew/supertab'
 Plug 'tpope/vim-dispatch'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Colorschemes
 Plug 'dracula/vim'
