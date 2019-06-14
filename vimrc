@@ -4,7 +4,6 @@ set showmatch
 set ignorecase
 set smartcase
 set cursorline
-set autochdir
 set foldmethod=indent
 set nofoldenable
 set foldlevel=2
@@ -116,6 +115,7 @@ Plug 'ervandew/supertab'
 Plug 'tpope/vim-dispatch'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'kshenoy/vim-signature'
 
 " Colorschemes
 Plug 'dracula/vim'
