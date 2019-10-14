@@ -1,5 +1,9 @@
 # Aliases
 
+# General
+alias l="exa --git"
+alias ll="l -l"
+
 ## Fix vim colors from within Tmux
 alias vim="TERM=xterm vim"
 ## Tmux
