@@ -1,8 +1,9 @@
 # Aliases
 
 # General
-alias l="exa --git"
-alias ll="l -l"
+alias ct="bat" # cat
+alias l="exa --git" # ls
+alias ll="l --long"
 
 ## Fix vim colors from within Tmux
 alias vim="TERM=xterm vim"
