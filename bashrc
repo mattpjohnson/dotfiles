@@ -21,6 +21,9 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gs="git status"
 alias gp="git pull"
 alias gpsh="git push"
+alias gsh="git stash"
+alias gshl="git stash list"
+alias gshp="git stash pop"
 
 ## Navigation
 alias gh="cd ~/Code/github"
