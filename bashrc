@@ -1,6 +1,7 @@
 # Aliases
 
 # General
+alias c.="code ."
 alias ct="bat" # cat
 alias l="exa --git" # ls
 alias ll="l --long"
@@ -25,8 +26,13 @@ alias gsh="git stash"
 alias gshl="git stash list"
 alias gshp="git stash pop"
 
+## Yarn
+alias yl="yarn lint --fix"
+alias ys="yarn start"
+alias yt="yarn test"
+
 ## Navigation
-alias gh="cd ~/Code/github"
+alias gh="cd ~/Code/github.com"
 alias ghm="gh && cd mattpjohnson"
 alias ~="cd ~"
 # alias .="cd .."
