@@ -1,16 +1,24 @@
+# Variables
+export FZF_DEFAULT_COMMAND="fdfind --type f"
+export GITHUB_DIR="~/Code/github.com"
+export GITHUB_MATTPJOHNSON_DIR="$GITHUB_DIR/mattpjohnson"
+
 # Aliases
 
 # General
 alias c.="code ."
-alias ct="bat" # cat
+alias ct="batcat" # cat
 alias l="exa --git" # ls
 alias ll="l --long"
 
-## Fix vim colors from within Tmux
-alias vim="TERM=xterm vim"
+## fzf
+alias fz='fzf --preview "batcat --style=numbers --color=always --line-range :500 {}"'
+
 ## Tmux
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmm='tmux new -As Main'
+## Fix vim colors from within Tmux
+alias vim="TERM=xterm vim"
 
 ## Git
 alias ga="git add"
@@ -32,8 +40,9 @@ alias ys="yarn start"
 alias yt="yarn test"
 
 ## Navigation
-alias gh="cd ~/Code/github.com"
-alias ghm="gh && cd mattpjohnson"
+alias e.="vim $GITHUB_MATTPJOHNSON_DIR/dotfiles"
+alias gh="cd $GITHUB_DIR"
+alias ghm="cd $GITHUB_MATTPJOHNSON_DIR"
 alias ~="cd ~"
 # alias .="cd .."
 alias ..="cd ../.."

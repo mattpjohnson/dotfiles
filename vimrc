@@ -128,7 +128,7 @@ Plug 'patstockwell/vim-monokai-tasty'
 
 " FZF
 Plug '~/.fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
 
 
 """""""""""""""""
