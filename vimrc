@@ -127,8 +127,8 @@ Plug 'fatih/molokai'
 Plug 'patstockwell/vim-monokai-tasty'
 
 " FZF
-Plug '~/.fzf'
-Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 
 """""""""""""""""
