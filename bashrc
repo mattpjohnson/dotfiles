@@ -47,3 +47,5 @@ alias ~="cd ~"
 # alias .="cd .."
 alias ..="cd ../.."
 alias ...="cd ../../.."
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
