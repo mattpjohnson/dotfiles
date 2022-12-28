@@ -39,6 +39,9 @@ alias yl="yarn lint --fix"
 alias ys="yarn start"
 alias yt="yarn test"
 
+## Programming languages
+alias kts="kotlinc -script"
+
 ## Navigation
 alias e.="vim $GITHUB_MATTPJOHNSON_DIR/dotfiles"
 alias gh="cd $GITHUB_DIR"
