@@ -106,11 +106,11 @@ Plug 'scrooloose/syntastic'
 Plug 'luochen1990/rainbow'
 Plug 'danro/rename.vim'
 Plug 'majutsushi/tagbar'
-Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'udalov/kotlin-vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-dispatch'
 Plug 'editorconfig/editorconfig-vim'
@@ -147,6 +147,12 @@ let g:rainbow_active = 1
 let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
 
+" GitGutter styling to use · instead of +/-
+let g:gitgutter_sign_added = '▌'
+let g:gitgutter_sign_modified = '▌'
+let g:gitgutter_sign_removed = '▌'
+let g:gitgutter_sign_modified_removed = '∙'
+
 " Automatically open NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
@@ -156,7 +162,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 " Automatically open tagbar
-autocmd BufEnter *.java :TagbarOpen
+autocmd BufEnter *.java,*.kt,*.proto :TagbarOpen
 
 if (has("termguicolors"))
   set termguicolors
